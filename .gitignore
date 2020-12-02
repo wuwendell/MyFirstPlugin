@@ -3,4 +3,4 @@
 *.iml
 
  # ignore dependencies
-/spigot-api-library
+/lib
