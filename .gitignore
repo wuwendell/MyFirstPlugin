@@ -4,3 +4,6 @@
 
  # ignore dependencies
 /lib
+
+ # ignore compiled output (for now, changes TBD)
+/out
