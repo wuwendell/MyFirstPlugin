@@ -1,6 +1,6 @@
 # name of plugin which appears in plugin list (can be anything, not necessarily your main class name or package name)
-name: MyFirstPluginTestExtraChars
-version: 1.0
+name: MyFirstPluginFromYmlName
+version: 1.0.0
 author: Wendell Wu
 # the location of plugin startup (onEnable) and teardown (onDisable)
 main: us.wendell.MyFirstPlugin.MyFirstPlugin
@@ -8,12 +8,12 @@ main: us.wendell.MyFirstPlugin.MyFirstPlugin
 api-version: 1.16
 
 #tell the server that an external plugin must be loaded before your plugin can be loaded
-depend:
+depend: []
 # website URL which appears when you type command /version <your plugin name>
 website: https://github.com/wuwendell/MyFirstPlugin
 
 # any commands you implement with your new plugin must be listed here
 commands:
   hello:
-      description: say hello to the player
-      usage: just type /hello
+    description: say hello to the player
+    usage: just type /hello

@@ -5,5 +5,6 @@
  # ignore dependencies
 /lib
 
- # ignore compiled output (for now, changes TBD)
-/out
+ # ignore compiled output but not the final jar
+ # production folder excluded since it only contains .class output
+/out/production

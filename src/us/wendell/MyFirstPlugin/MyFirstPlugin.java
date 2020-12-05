@@ -7,11 +7,14 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MyFirstPlugin extends JavaPlugin {
+    public final String pluginName = "MyFirstPlugin";
+
     @Override
     public void onEnable() {
         //startup
         //reloads
         //plugin reloads
+        getLogger().info(pluginName + " has been enabled!");
     }
 
     @Override
@@ -19,10 +22,17 @@ public class MyFirstPlugin extends JavaPlugin {
         //shutdown
         //reloads
         //plugin reloads
+        getLogger().info(pluginName + " has been disabled!");
     }
 
-    // /hello <-- Hey welcome!
-
+    /**
+     * Command /hello. Says hello to the player or console, depending on who's sending it and if they have permission.
+     * @param sender the sender of the command: Console, or Player
+     * @param cmd the command itself
+     * @param label the name of the command sent, in this case, must be 'hello'.
+     * @param args the arguments passed to the command.
+     * @return true or false, depending on if the command was successfully executed.
+     */
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
         if(label.equalsIgnoreCase("hello")){
             if(sender instanceof Player){
@@ -40,8 +50,8 @@ public class MyFirstPlugin extends JavaPlugin {
             }
             return true;
         }else{
+            sender.sendMessage("That is not a supported command!");
             return false;
         }
-
     }
 }
