@@ -6,6 +6,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+/**
+ * A demonstration plugin going from creating the project structure all the way to running on a test server.
+ */
 public class MyFirstPlugin extends JavaPlugin {
     public final String pluginName = "MyFirstPlugin";
 
